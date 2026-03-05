@@ -1,17 +1,34 @@
-# Automação de Cadastro com Python e Pandas 🤖
+# Automação de Cadastro via CSV (Google Forms) 🤖
 
-Este projeto automatiza o preenchimento de formulários (Google Forms) a partir de uma base de dados em CSV. É uma solução prática para substituir tarefas repetitivas de digitação por um processo rápido e preciso.
+Automação em **Python** que lê uma base de dados em **CSV** e realiza o preenchimento automático de um **Google Forms**, simulando ações humanas (cliques, digitação e navegação com TAB/ENTER).  
+Projeto focado em praticar automação de tarefas repetitivas e manipulação de dados com `pandas`.
 
-## 🚀 O que este projeto faz?
-O script lê uma planilha de dados (nome, idade, email), abre o navegador automaticamente e realiza o cadastro de cada registro no formulário, simulando as ações humanas de clique, digitação e navegação por teclado.
+## 🎯 Problema que resolve
+Cadastrar muitos registros manualmente em formulários é **lento** e sujeito a **erros**.  
+Este script automatiza o processo a partir de uma planilha, reduzindo o trabalho manual e padronizando o preenchimento.
 
-## 🛠️ Tecnologias Utilizadas
-- **Python 3**: Linguagem principal.
-- **Pandas**: Para manipulação e leitura eficiente da base de dados CSV.
-- **PyAutoGUI**: Para automação da interface gráfica (controle de mouse e teclado).
-- **Time/Webbrowser**: Para controle de tempo e navegação web.
+## ✅ O que o script faz
+- Lê `dados.csv` com colunas `nome`, `idade`, `email`
+- Abre o navegador e acessa o Google Forms
+- Para cada registro do CSV:
+  - Preenche os campos do formulário (nome, idade, email)
+  - Envia o formulário
+  - Clica em “Enviar outra resposta”
+  - Repete até finalizar
 
-## 📋 Para executar
-Antes de rodar o script, você precisará instalar as bibliotecas necessárias:
+## 🛠️ Tecnologias utilizadas
+- **Python 3**
+- **Pandas** (leitura/manipulação do CSV)
+- **PyAutoGUI** (automação de mouse e teclado)
+- **time** (controle de espera/sincronização)
+
+## 📦 Pré-requisitos
+- Python 3 instalado
+- Repositório com os arquivos:
+  - `main.py`
+  - `dados.csv`
+
+Instale as dependências:
+
 ```bash
 pip install pandas pyautogui
